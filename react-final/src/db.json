@@ -1,0 +1,145 @@
+{
+  "meals": [
+    {
+      "id": 1,
+      "type": "breakfast",
+      "name": "Fried egg",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Eggs, turkey bacon, toast and tomato",
+      "price": 7.99,
+      "src": "src/images/breakfastMeals/breakfast1.png"
+    },
+    {
+      "id": 2,
+      "type": "breakfast",
+      "name": "Turk kahvaltisi",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Olive, olive oil, nutella, egg, cheese, jam, turkey, bacon and fruit",
+      "price": 13.99,
+      "src": "src/images/breakfastMeals/breakfast2.png"
+    },
+    {
+      "id": 3,
+      "type": "breakfast",
+      "name": "Cornflakes",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Natural swiss's cow milk and cornflakes",
+      "price": 3.99,
+      "src": "src/images/breakfastMeals/breakfast3.png"
+    },
+    {
+      "id": 4,
+      "type": "breakfast",
+      "name": "Sucuklu yumurta",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Eggs, butter and beef bacon",
+      "price": 5.99,
+      "src": "src/images/breakfastMeals/breakfast4.png"
+    },
+    {
+      "id": 5,
+      "type": "breakfast",
+      "name": "Morning coffee",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Brazilian coffee, german cake and creamy cookies",
+      "price": 3.99,
+      "src": "src/images/breakfastMeals/breakfast5.png"
+    },
+    {
+      "id": 6,
+      "type": "dinner",
+      "name": "Roasted salmon",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Norway salmon and akdeniz salad",
+      "price": 11.99,
+      "src": "src/images/dinnerMeals/food1.png"
+    },
+    {
+      "id": 7,
+      "type": "dinner",
+      "name": "Norway prawn",
+      "color": "#baffca",
+      "desc": "Lemon, apple, lime, orange and Norway prawn",
+      "price": 8.99,
+      "src": "src/images/dinnerMeals/food-green.png"
+    },
+    {
+      "id": 8,
+      "type": "dinner",
+      "name": "Mix salad",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Greens, radish, orange and onion",
+      "price": 6.99,
+      "src": "src/images/dinnerMeals/food3.png"
+    },
+    {
+      "id": 9,
+      "type": "dinner",
+      "name": "Fish salad",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Roasted Norway salmon, greens, chickpeas, onion and olive oil",
+      "price": 14.99,
+      "src": "src/images/dinnerMeals/food2.png"
+    },
+    {
+      "id": 10,
+      "type": "dinner",
+      "name": "Vegan mix",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Roasted broad beans, greens, olive oil and mushroom",
+      "price": 2.99,
+      "src": "src/images/dinnerMeals/food4.png"
+    },
+    {
+      "id": 11,
+      "type": "lunch",
+      "name": "American pizza",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Mozarella cheese, thin crust and beef sausage",
+      "price": 9.99,
+      "src": "src/images/lunchMeals/lunch1.png"
+    },
+    {
+      "id": 12,
+      "type": "lunch",
+      "name": "Japan beef stake",
+      "color": "#baffca",
+      "desc": "Grilled Japan beef and netherland's tomato, greens and barbecue sauce",
+      "price": 19.99,
+      "src": "src/images/lunchMeals/lunch2.png"
+    },
+    {
+      "id": 13,
+      "type": "lunch",
+      "name": "Chinese lunch",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Rice, fried fish, spicy and sour sauce, green wrap",
+      "price": 15.99,
+      "src": "src/images/lunchMeals/lunch3.png"
+    },
+    {
+      "id": 14,
+      "type": "lunch",
+      "name": "Grilled fish",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Grilled Norway salmon, lemon and akdeniz salad",
+      "price": 11.99,
+      "src": "src/images/lunchMeals/lunch4.png"
+    },
+    {
+      "id": 15,
+      "type": "lunch",
+      "name": "Wood fired chicken",
+      "color": "rgba(255, 238, 222, 1)",
+      "desc": "Chicken, cucumber and lemon",
+      "price": 2.99,
+      "src": "src/images/lunchMeals/lunch5.png"
+    }
+  ],
+  "admin": [
+    {
+      "username": "admin",
+      "password": "admin123"
+    }
+  ]
+}

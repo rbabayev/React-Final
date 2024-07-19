@@ -8,7 +8,6 @@ import Dinner from "./components/Dinner";
 import Lunch from "./components/Lunch";
 import Profile from "./components/Profile";
 import Cart from "./components/Cart";
-
 import "./App.css";
 
 function App() {
@@ -21,11 +20,11 @@ function App() {
   return (
     <div>
       <Routes className="header-selection">
-        <Route path="/" element={<MainMenu />} />
+        <Route path="/mainmenu" element={<MainMenu />} />
         <Route path="/breakfast" element={<Breakfast />} />
         <Route path="/dinner" element={<Dinner />} />
         <Route path="/lunch" element={<Lunch />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/" element={<Profile />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>

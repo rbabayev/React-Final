@@ -14,7 +14,7 @@ function Profile() {
 
   const handleLogin = () => {
     if (username === admin.username && password === admin.password) {
-      navigate("/");
+      navigate("/mainmenu");
     } else {
       alert("Incorrect username or password!");
     }

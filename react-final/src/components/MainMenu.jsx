@@ -12,6 +12,7 @@ import {
 import logo from "../images/logo.png";
 import cartLogo from "../images/cartLogo.png";
 import userLogo from "../images/userLogo.png";
+import halfCircle from "../images/halfCircle.png";
 
 function MainMenu() {
   const dispatch = useDispatch();
@@ -34,15 +35,14 @@ function MainMenu() {
 
   const handleDecrementId = () => {
     setCurrentMealIndex((prevIndex) => {
-      const newIndex = prevIndex > 0 ? prevIndex - 1 : prevIndex;
+      const newIndex = prevIndex > 0 ? prevIndex - 1 : filteredMeals.length - 1;
       return newIndex;
     });
   };
 
   const handleIncrementId = () => {
     setCurrentMealIndex((prevIndex) => {
-      const newIndex =
-        prevIndex < filteredMeals.length - 1 ? prevIndex + 1 : prevIndex;
+      const newIndex = (prevIndex + 1) % filteredMeals.length;
       return newIndex;
     });
   };
@@ -54,7 +54,7 @@ function MainMenu() {
   const navigate = useNavigate();
 
   const handleUserButtonClick = () => {
-    navigate("/profile");
+    navigate("/");
   };
 
   const handleCartButtonClick = () => {
@@ -84,21 +84,6 @@ function MainMenu() {
             Lunch
           </Link>
         </ul>
-        <div
-          className="circle"
-          style={{
-            backgroundColor: currentMeal ? currentMeal.color : "transparent",
-          }}
-        ></div>
-        <div className="meal-images">
-          {currentMeal && (
-            <img
-              className="meal"
-              src={currentMeal.src}
-              alt={currentMeal.name}
-            />
-          )}
-        </div>
         <ul className="header-menu">
           <button>
             <img
@@ -117,17 +102,28 @@ function MainMenu() {
       </header>
 
       <main className="main-menu">
-        {currentMeal && (
-          <div className="main-left">
-            <h3 className="price">${currentMeal.price}</h3>
-            <h4 className="food-name">{currentMeal.name}</h4>
-            <p className="food-info">{currentMeal.desc}</p>
-            <button className="order-btn" onClick={handleOrderNow}>
-              ORDER NOW
-            </button>
-          </div>
-        )}
+        <div className="circle">
+          {filteredMeals.map((meal, index) => (
+            <div
+              key={meal.id}
+              className={`meal-item ${
+                index === currentMealIndex ? "active" : ""
+              }`}
+              style={{
+                transform: `rotate(${
+                  (-220 / filteredMeals.length) * index
+                }deg) translate(200px) rotate(${-(
+                  (180 / filteredMeals.length) *
+                  index
+                )}deg)`,
+              }}
+            >
+              <img src={meal.src} alt={meal.name} />
+            </div>
+          ))}
+        </div>
         <div className="main-right">
+          <img src={halfCircle} alt="circle" className="half-circle" />
           <div className="left-right-btns">
             <button className="turn-left-btn" onClick={handleDecrementId}>
               🠋
@@ -136,7 +132,22 @@ function MainMenu() {
               🠋
             </button>
           </div>
+          {currentMeal && (
+            <div className="meal-details">
+              <h3 className="price">${currentMeal.price}</h3>
+              <h4 className="food-name">{currentMeal.name}</h4>
+              <p className="food-info">{currentMeal.desc}</p>
+              <button className="order-btn" onClick={handleOrderNow}>
+                ORDER NOW
+              </button>
+            </div>
+          )}
         </div>
+        {currentMeal && (
+          <div className="active-meal">
+            <img src={currentMeal.src} alt={currentMeal.name} />
+          </div>
+        )}
       </main>
 
       <footer>

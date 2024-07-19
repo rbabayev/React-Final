@@ -25,7 +25,7 @@ function Cart() {
   return (
     <div className="cartPage">
       <img className="loginLogo" src={logo} alt="Logo" />
-      <Link to="/" className="return-home">
+      <Link to="/mainmenu" className="return-home">
         Home
       </Link>
       <ul className="cart-values">
